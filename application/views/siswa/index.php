@@ -29,97 +29,17 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Interface
+                Siswa
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Addons
-            </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="<?= base_url('siswa') ?>">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
+                    <span>Siswa</span></a>
             </li>
 
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
-            </li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
-            <!-- Sidebar Message -->
-            <div class="sidebar-card d-none d-lg-flex">
-                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
-                <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
-            </div>
 
         </ul>
         <!-- End of Sidebar -->
@@ -329,31 +249,39 @@
                     <!-- Content Row -->
                     <div class="card">
                         <div class="card-body">
-                            <form action="<?= base_url('siswa/create') ?>" method="POST">
+                            <form action="<?= base_url('siswa') ?>" method="POST">
 
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="">Nama Siswa</label>
                                             <input type="text" name="nama" id="" class="form-control">
+                                            <?php echo form_error('nama', '<small class="text-danger">', '</small>'); ?>
+
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="">Nis</label>
-                                            <input type="text" name="" id="" class="form-control">
+                                            <input type="text" name="nis" id="" class="form-control">
+                                            <?php echo form_error('nis', '<small class="text-danger">', '</small>'); ?>
+
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="">Kelas</label>
-                                            <input type="text" name="" id="" class="form-control">
+                                            <input type="text" name="kelas" id="" class="form-control">
+                                            <?php echo form_error('kelas', '<small class="text-danger">', '</small>'); ?>
+
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="">Tanggal Lahir</label>
-                                            <input type="date" name="" id="" class="form-control">
+                                            <input type="date" name="tanggal_lahir" id="" class="form-control">
+                                            <?php echo form_error('tanggal_lahir', '<small class="text-danger">', '</small>'); ?>
+
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -362,37 +290,41 @@
                                             <div class="d-flex " style="gap:16px">
 
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                    <input class="form-check-input" type="radio" name="jenis_kelamin" id="jenis_kelamin1" value="Pria">
+                                                    <label class="form-check-label" for="jenis_kelamin1">
                                                         Laki Laki
                                                     </label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                    <input class="form-check-input" type="radio" name="jenis_kelamin" id="jenis_kelamin2" value="Perempuan" checked>
+                                                    <label class="form-check-label" for="jenis_kelamin2">
                                                         Perempuan
                                                     </label>
                                                 </div>
                                             </div>
+                                            <?php echo form_error('jenis_kelamin', '<small class="text-danger">', '</small>'); ?>
+
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="">Agama</label>
-                                            <select name="" id="" class="form-control select2">
+                                            <select name="agama" id="" class="form-control select2">
                                                 <option value="">Select Agama</option>
-                                                <option value="">Islam</option>
-                                                <option value="">Kristen</option>
-                                                <option value="">Katholik</option>
-                                                <option value="">Budha</option>
-                                                <option value="">Hindu</option>
-                                                <option value="">Protestan</option>
-                                                <option value="">Khonghucu</option>
+                                                <option value="Islam">Islam</option>
+                                                <option value="Kristen">Kristen</option>
+                                                <option value="Katholik">Katholik</option>
+                                                <option value="Budha">Budha</option>
+                                                <option value="Hindu">Hindu</option>
+                                                <option value="Protestan">Protestan</option>
+                                                <option value="Khonghucu">Khonghucu</option>
 
 
 
 
                                             </select>
+                                            <?php echo form_error('agama', '<small class="text-danger">', '</small>'); ?>
+
                                         </div>
                                     </div>
                                 </div>

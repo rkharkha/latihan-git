@@ -51,6 +51,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 */
 $route['default_controller'] = 'Contoh1';
 $route['contoh1/(:any)'] = 'Contoh1/index/$1';
+$route['siswa'] = 'siswa/index';
+$route['siswa/create'] = 'siswa/create';
+$route['siswa/detail'] = 'siswa/detail';
+
+
 // $route['latihan1/(:any)'] = 'Latihan1/index/$1';
 
 $route['404_override'] = '';
