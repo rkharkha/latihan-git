@@ -30,9 +30,9 @@ class Siswa extends CI_Controller
         $this->form_validation->set_rules('jenis_kelamin', 'JenisKelamin', 'required');
         $this->form_validation->set_rules('agama', 'Agama', 'required');
         if ($this->form_validation->run() == FALSE) {
-            // $this->load->view('layouts/header');
+            $this->load->view('layouts/header');
             $this->load->view('siswa/index2');
-            // $this->load->view('layouts/footer');
+            $this->load->view('layouts/footer');
         } else {
             $data = [
                 'nama' => $this->input->post('nama'),
