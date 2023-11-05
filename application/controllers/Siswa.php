@@ -27,6 +27,10 @@ class Siswa extends CI_Controller
         $this->form_validation->set_rules('nis', 'Nis', 'required|numeric');
         $this->form_validation->set_rules('kelas', 'Kelas', 'required');
         $this->form_validation->set_rules('tanggal_lahir', 'TanggalLahir', 'required');
+        $this->form_validation->set_rules('tempat_lahir', 'TempatLahir', 'required');
+        $this->form_validation->set_rules('alamat', 'Alamat', 'required');
+
+
         $this->form_validation->set_rules('jenis_kelamin', 'JenisKelamin', 'required');
         $this->form_validation->set_rules('agama', 'Agama', 'required');
         if ($this->form_validation->run() == FALSE) {
@@ -41,6 +45,9 @@ class Siswa extends CI_Controller
                 'tanggal_lahir' => $this->input->post('tanggal_lahir'),
                 'jenis_kelamin' => $this->input->post('jenis_kelamin'),
                 'agama' => $this->input->post('agama'),
+                'tempat_lahir' => $this->input->post('tempat_lahir'),
+                'alamat' => $this->input->post('alamat'),
+
 
             ];
             $this->session->set_userdata($data);

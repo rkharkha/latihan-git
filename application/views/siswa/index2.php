@@ -11,94 +11,215 @@
 </head>
 
 <body>
-    <div class="container-fluid" style="max-width: 1000px;">
-        <h1 class="text-center"> Tambah Siswa</h1>
-        <div class="d-flex align-items-center justify-content-center shadow p-3">
-            <form action="<?= base_url('siswa') ?>" method="POST">
+    <div class="container-fluid mt-5" style="max-width: 700px;">
+        <div class="card">
+            <div class="card-header bg-dark">
+                <div class="d-flex align-items-center justify-content-between">
 
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="">Nama Siswa</label>
-                            <input type="text" name="nama" id="" class="form-control">
-                            <?php echo form_error('nama', '<small class="text-danger">', '</small>'); ?>
+                    <h1 class="text-white"> Nizam</h1>
+                    <h4 class="text-white"> Nizam</h4>
 
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="">Nis</label>
-                            <input type="text" name="nis" id="" class="form-control">
-                            <?php echo form_error('nis', '<small class="text-danger">', '</small>'); ?>
+                </div>
+            </div>
+            <div class="card-body">
 
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="">Kelas</label>
-                            <input type="text" name="kelas" id="" class="form-control">
-                            <?php echo form_error('kelas', '<small class="text-danger">', '</small>'); ?>
+                <div class="d-flex align-items-center justify-content-center ">
+                    <form action="<?= base_url('siswa') ?>" method="POST">
+                        <div class="row">
+                            <div class="col-md-4 text-center mt-2"> Nama Siswa:</div>
+                            <div class="col-md-8"><input type="text" name="nama" id="" class="form-control">
+                                <?php echo form_error('nama', '<small class="text-danger">', '</small>'); ?>
+                            </div>
 
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="">Tanggal Lahir</label>
-                            <input type="date" name="tanggal_lahir" id="" class="form-control">
-                            <?php echo form_error('tanggal_lahir', '<small class="text-danger">', '</small>'); ?>
+                        <div class="row">
+                            <div class="col-md-4 text-center mt-2"> Nis:</div>
+                            <div class="col-md-8">
+                                <input type="text" name="nis" id="" class="form-control">
 
+                                <?php echo form_error('nis', '<small class="text-danger">', '</small>'); ?>
+
+
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="">Jenis Kelamin</label>
-                            <div class="d-flex " style="gap:16px">
 
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="jenis_kelamin" id="jenis_kelamin1" value="Pria" checked>
-                                    <label class="form-check-label" for="jenis_kelamin1">
-                                        Laki Laki
-                                    </label>
+                        <div class="row">
+                            <div class="col-md-4 text-center mt-2"> Kelas:</div>
+                            <div class="col-md-8">
+                                <input type="text" name="kelas" id="" class="form-control">
+
+                                <?php echo form_error('kelas', '<small class="text-danger">', '</small>'); ?>
+
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 text-center mt-2"> Tanggal Lahir:</div>
+                            <div class="col-md-8">
+                                <input type="date" name="tanggal_lahir" id="" class="form-control">
+
+                                <?php echo form_error('tanggal_lahir', '<small class="text-danger">', '</small>'); ?>
+
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 text-center mt-2"> Tempat Lahir:</div>
+                            <div class="col-md-8">
+                                <input type="text" name="tempat_lahir" id="" class="form-control">
+
+                                <?php echo form_error('tempat_lahir', '<small class="text-danger">', '</small>'); ?>
+
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 text-center mt-2"> Alamat:</div>
+                            <div class="col-md-8">
+                                <textarea name="alamat" class="form-control" id="" cols="30" rows="3"></textarea>
+
+                                <?php echo form_error('alamat', '<small class="text-danger">', '</small>'); ?>
+
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 text-center mt-2"> Jenis Kelamin:</div>
+                            <div class="col-md-8">
+                                <div class="d-flex " style="gap:16px">
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="jenis_kelamin" id="jenis_kelamin1" value="Pria" checked>
+                                        <label class="form-check-label" for="jenis_kelamin1">
+                                            Laki Laki
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="jenis_kelamin" id="jenis_kelamin2" value="Perempuan">
+                                        <label class="form-check-label" for="jenis_kelamin2">
+                                            Perempuan
+                                        </label>
+                                    </div>
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="jenis_kelamin" id="jenis_kelamin2" value="Perempuan">
-                                    <label class="form-check-label" for="jenis_kelamin2">
-                                        Perempuan
-                                    </label>
+                                <?php echo form_error('jenis_kelamin', '<small class="text-danger">', '</small>'); ?>
+
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 text-center mt-2"> Agama:</div>
+                            <div class="col-md-8">
+                                <select name="agama" id="" class="form-control select2">
+                                    <option value="">Select Agama</option>
+                                    <option value="Islam">Islam</option>
+                                    <option value="Kristen">Kristen</option>
+                                    <option value="Katholik">Katholik</option>
+                                    <option value="Budha">Budha</option>
+                                    <option value="Hindu">Hindu</option>
+                                    <option value="Protestan">Protestan</option>
+                                    <option value="Khonghucu">Khonghucu</option>
+
+
+
+
+                                </select>
+
+                                <?php echo form_error('agama', '<small class="text-danger">', '</small>'); ?>
+
+
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Nis</label>
+                                    <input type="text" name="nama" id="" class="form-control">
+                                    <?php echo form_error('nama', '<small class="text-danger">', '</small>'); ?>
+
                                 </div>
                             </div>
-                            <?php echo form_error('jenis_kelamin', '<small class="text-danger">', '</small>'); ?>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Nis</label>
+                                    <input type="text" name="nis" id="" class="form-control">
+                                    <?php echo form_error('nis', '<small class="text-danger">', '</small>'); ?>
 
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Kelas</label>
+                                    <input type="text" name="kelas" id="" class="form-control">
+                                    <?php echo form_error('kelas', '<small class="text-danger">', '</small>'); ?>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Tanggal Lahir</label>
+                                    <input type="date" name="tanggal_lahir" id="" class="form-control">
+                                    <?php echo form_error('tanggal_lahir', '<small class="text-danger">', '</small>'); ?>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Jenis Kelamin</label>
+                                    <div class="d-flex " style="gap:16px">
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="jenis_kelamin" id="jenis_kelamin1" value="Pria" checked>
+                                            <label class="form-check-label" for="jenis_kelamin1">
+                                                Laki Laki
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="jenis_kelamin" id="jenis_kelamin2" value="Perempuan">
+                                            <label class="form-check-label" for="jenis_kelamin2">
+                                                Perempuan
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <?php echo form_error('jenis_kelamin', '<small class="text-danger">', '</small>'); ?>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Agama</label>
+                                    <select name="agama" id="" class="form-control select2">
+                                        <option value="">Select Agama</option>
+                                        <option value="Islam">Islam</option>
+                                        <option value="Kristen">Kristen</option>
+                                        <option value="Katholik">Katholik</option>
+                                        <option value="Budha">Budha</option>
+                                        <option value="Hindu">Hindu</option>
+                                        <option value="Protestan">Protestan</option>
+                                        <option value="Khonghucu">Khonghucu</option>
+
+
+
+
+                                    </select>
+                                    <?php echo form_error('agama', '<small class="text-danger">', '</small>'); ?>
+
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="d-flex justify-content-end" style="gap:16px">
+                            <button class="btn btn-dark">Cancel</button>
+
+                            <button class="btn btn-primary">Submit</button>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="">Agama</label>
-                            <select name="agama" id="" class="form-control select2">
-                                <option value="">Select Agama</option>
-                                <option value="Islam">Islam</option>
-                                <option value="Kristen">Kristen</option>
-                                <option value="Katholik">Katholik</option>
-                                <option value="Budha">Budha</option>
-                                <option value="Hindu">Hindu</option>
-                                <option value="Protestan">Protestan</option>
-                                <option value="Khonghucu">Khonghucu</option>
-
-
-
-
-                            </select>
-                            <?php echo form_error('agama', '<small class="text-danger">', '</small>'); ?>
-
-                        </div>
-                    </div>
+                    </form>
                 </div>
-                <div class="d-flex justify-content-end" style="gap:16px">
-                    <button class="btn btn-dark">Cancel</button>
+            </div>
+            <div class="card-footer bg-dark">
+                <div class="d-flex align-items-center">
 
-                    <button class="btn btn-primary">Submit</button>
+                    <h4 class="text-white">Nizam</h4>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
     <script src="<?= base_url('assets/') ?>vendor/jquery/jquery.min.js"></script>
